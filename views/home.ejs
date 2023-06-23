@@ -1,0 +1,20 @@
+<%- include("partials/header") -%>
+<div class="blogs" >
+    <div class="items">
+        <h1><%=name[0]%></h1><br>
+        <p><%=home[0]%></p>
+    </div>
+</div>
+
+<% for(var i=1;i<name.length;i++){%>
+<div class="blogs" >
+    <div class="items">
+        <h1><%=name[i]%></h1><br>
+        <p><%=home[i].substring(0,100)+"..." %> <a href="/posts/<%=name[i]%>">Read More</a> </p>
+    </div>
+</div>
+<%}%>
+
+
+
+<%- include("partials/footer") -%>
